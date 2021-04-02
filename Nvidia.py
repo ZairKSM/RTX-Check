@@ -4,7 +4,7 @@ from time import *
 import json
 import os
 #ok
-pathChrome = os.path.abspath(__file__).replace("Nvidia.py",'chromedriver.exe')
+pathChrome = os.path.abspath(__file__).replace("Nvidia.py",'chromedriver')
 print(pathChrome)
 urls = [
     'https://shop.nvidia.com/fr-fr/geforce/store/?page=1&limit=9&locale=fr-fr&gpu=RTX%203080,RTX%203070,RTX%203060%20Ti&manufacturer=NVIDIA&gpu_filter=RTX%203090~0,RTX%203080~1,RTX%203070~1,RTX%203060%20Ti~1,RTX%203060~0,RTX%202080%20Ti~0,RTX%202080%20SUPER~0,RTX%202080~0,RTX%202070%20SUPER~0,RTX%202070~0,RTX%202060~0,GTX%201660%20Ti~0,GTX%201660%20SUPER~0,GTX%201660~0,GTX%201650%20Ti~0,GTX%201650%20SUPER~0,GTX%201650~0'
