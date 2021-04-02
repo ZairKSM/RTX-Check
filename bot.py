@@ -3,8 +3,10 @@ from discord.ext import commands, tasks
 from Nvidia import CheckNvidia
 from time import *
 import json
+import os
+from os import environ
 
-
+TOKEN = environ["TOKEN"]
 def init():
     with open("config.json", "r") as file:
         return json.load(file)
@@ -123,4 +125,4 @@ async def check(channel,*,args = None):
 
     else:
         await channel.send("Les arguments possibles sont uniquement: 3060Ti , 3070, 3080 ou all")
-client.run(config["token"])
+client.run(TOKEN)
