@@ -2,6 +2,7 @@ from selenium import webdriver
 from bs4 import BeautifulSoup
 from time import *
 import json
+import os
 
 pathChrome = os.path.abspath(__file__).replace("Nvidia.py",'chromedriver.exe')
 print(pathChrome)
