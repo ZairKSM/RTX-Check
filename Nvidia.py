@@ -19,8 +19,11 @@ RTX_Code =[
 def CheckNvidia():
     RTX= []
     options = webdriver.ChromeOptions()
-    options.add_argument("headless")
-    driver = webdriver.Chrome(chrome_options=options,executable_path=pathChrome)
+    options.binary_location = environ.get("GOOGLE_CHROME_BIN")
+    options.add_argument("--headless")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--no-sandbox")
+    driver = webdriver.Chrome(chrome_options=options,executable_path=environ.get("CHROMEDRIVER_PATH"))
     driver.get(urls[0])
 
     content = driver.page_source.encode('utf-8').strip()
