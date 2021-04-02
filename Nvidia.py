@@ -19,7 +19,7 @@ def CheckNvidia():
     RTX= []
     options = webdriver.ChromeOptions()
     options.add_argument("headless")
-    driver = webdriver.Chrome(chrome_options=options,executable_path='./chromedriver.exe')
+    driver = webdriver.Chrome(chrome_options=options,executable_path='chromedriver.exe')
     driver.get(urls[0])
 
     content = driver.page_source.encode('utf-8').strip()
