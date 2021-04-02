@@ -3,6 +3,8 @@ from bs4 import BeautifulSoup
 from time import *
 import json
 import os
+from os import environ
+
 
 pathChrome = os.path.abspath(__file__).replace("Nvidia.py",'chromedriver')
 print(pathChrome)
