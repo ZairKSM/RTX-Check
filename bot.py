@@ -6,6 +6,8 @@ import json
 import os
 from os import environ
 
+print('Script On')
+
 TOKEN = environ["TOKEN"]
 def init():
     with open("config.json", "r") as file:
