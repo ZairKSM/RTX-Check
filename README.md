@@ -1,1 +1,3 @@
 # RTX-Check
+
+CHECK NVIDIA RTX 3060 - 3060 Ti - 3070 - 3080
