@@ -46,6 +46,8 @@ async def notifsPrice():
             embed.set_image(url=RTX[k][1])
             embed.set_footer(text="Checker by Zaïr_KSM#4502")
 
+            
+            await notifsChannel.send("<@393151974109085697>")
             await notifsChannel.send(embed=embed)
         else:
             print(f'T')
