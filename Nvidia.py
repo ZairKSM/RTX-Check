@@ -2,6 +2,9 @@ from selenium import webdriver
 from bs4 import BeautifulSoup
 from time import *
 import json
+
+
+
 urls = [
     'https://shop.nvidia.com/fr-fr/geforce/store/?page=1&limit=9&locale=fr-fr&gpu=RTX%203080,RTX%203070,RTX%203060%20Ti&manufacturer=NVIDIA&gpu_filter=RTX%203090~0,RTX%203080~1,RTX%203070~1,RTX%203060%20Ti~1,RTX%203060~0,RTX%202080%20Ti~0,RTX%202080%20SUPER~0,RTX%202080~0,RTX%202070%20SUPER~0,RTX%202070~0,RTX%202060~0,GTX%201660%20Ti~0,GTX%201660%20SUPER~0,GTX%201660~0,GTX%201650%20Ti~0,GTX%201650%20SUPER~0,GTX%201650~0'
 ]
@@ -16,7 +19,7 @@ def CheckNvidia():
     RTX= []
     options = webdriver.ChromeOptions()
     options.add_argument("headless")
-    driver = webdriver.Chrome(chrome_options=options)
+    driver = webdriver.Chrome(chrome_options=options,executable_path='./chromedriver.exe')
     driver.get(urls[0])
 
     content = driver.page_source.encode('utf-8').strip()
